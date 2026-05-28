@@ -21,6 +21,7 @@
           <h1>蔬菜类别与数量汇总</h1>
         </div>
         <div class="actions">
+          <button id="manualRefresh" class="secondary" type="button">刷新</button>
           <button id="exportCsv" class="secondary" type="button">导出 CSV</button>
           <button id="clearAll" class="danger" type="button">清空数据</button>
         </div>
@@ -129,7 +130,7 @@
       </section>
     </main>
 
-    <script src="app.js?v=20260528-pivot-csv-1"></script>
+    <script src="app.js?v=20260528-manual-refresh-1"></script>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js");

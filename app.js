@@ -13,11 +13,12 @@ const summaryBody = document.querySelector("#summaryBody");
 const schoolCount = document.querySelector("#schoolCount");
 const vegetableCount = document.querySelector("#vegetableCount");
 const recordCount = document.querySelector("#recordCount");
+const manualRefresh = document.querySelector("#manualRefresh");
 const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260528-pivot-csv-1";
+const appVersion = "20260528-manual-refresh-1";
 
 const fixedSchools = [
   "九冶小学",
@@ -572,6 +573,8 @@ exportCsv.addEventListener("click", () => {
   link.click();
   URL.revokeObjectURL(url);
 });
+
+manualRefresh.addEventListener("click", refreshApp);
 
 function resetPullRefresh(distance = 0) {
   pullRefresh.classList.toggle("is-visible", distance > 0);
