@@ -17,7 +17,7 @@ const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260528-pull-refresh-1";
+const appVersion = "20260528-jiuye-primary-1";
 
 const fixedSchools = [
   "九冶小学",
@@ -135,9 +135,11 @@ const fixedVegetables = [
   "泡红椒2kg",
   "红九九",
   "400g紫菜",
+  "李氏香油",
+  "500g海藻盐",
 ];
 
-const seedVersion = "2026-05-28-mianyang-center-primary-1";
+const seedVersion = "2026-05-28-jiuye-primary-1";
 const seedKey = `${storageKey}:seed:${seedVersion}`;
 const seedRecords = [
   { id: "seed-mianyang-center-001", school: "勉阳中心小学", vegetable: "豆腐", quantity: 10, unit: "斤" },
@@ -157,6 +159,25 @@ const seedRecords = [
   { id: "seed-mianyang-center-015", school: "勉阳中心小学", vegetable: "泡红椒2kg", quantity: 1, unit: "袋" },
   { id: "seed-mianyang-center-016", school: "勉阳中心小学", vegetable: "红九九", quantity: 2, unit: "袋" },
   { id: "seed-mianyang-center-017", school: "勉阳中心小学", vegetable: "400g紫菜", quantity: 2, unit: "袋" },
+  { id: "seed-mianyang-middle-001", school: "勉阳初级中学", vegetable: "李氏香油", quantity: 10, unit: "瓶" },
+  { id: "seed-mianyang-middle-002", school: "勉阳初级中学", vegetable: "500g海藻盐", quantity: 240, unit: "袋" },
+  { id: "seed-mianyang-middle-003", school: "勉阳初级中学", vegetable: "香菇", quantity: 30, unit: "斤" },
+  { id: "seed-mianyang-middle-004", school: "勉阳初级中学", vegetable: "青椒", quantity: 30, unit: "斤" },
+  { id: "seed-mianyang-middle-005", school: "勉阳初级中学", vegetable: "白菜", quantity: 150, unit: "斤" },
+  { id: "seed-mianyang-middle-006", school: "勉阳初级中学", vegetable: "豆腐", quantity: 90, unit: "斤" },
+  { id: "seed-mianyang-middle-007", school: "勉阳初级中学", vegetable: "豇豆", quantity: 90, unit: "斤" },
+  { id: "seed-mianyang-middle-008", school: "勉阳初级中学", vegetable: "西兰花", quantity: 10, unit: "斤" },
+  { id: "seed-mianyang-middle-009", school: "勉阳初级中学", vegetable: "黄瓜", quantity: 30, unit: "斤" },
+  { id: "seed-mianyang-middle-010", school: "勉阳初级中学", vegetable: "生菜", quantity: 20, unit: "斤" },
+  { id: "seed-mianyang-middle-011", school: "勉阳初级中学", vegetable: "新土豆", quantity: 200, unit: "斤" },
+  { id: "seed-jiuye-primary-001", school: "九冶小学", vegetable: "土豆", quantity: 280, unit: "斤" },
+  { id: "seed-jiuye-primary-002", school: "九冶小学", vegetable: "山药", quantity: 100, unit: "斤" },
+  { id: "seed-jiuye-primary-003", school: "九冶小学", vegetable: "韭菜", quantity: 50, unit: "斤" },
+  { id: "seed-jiuye-primary-004", school: "九冶小学", vegetable: "豆芽", quantity: 20, unit: "斤" },
+  { id: "seed-jiuye-primary-005", school: "九冶小学", vegetable: "豆腐干", quantity: 35, unit: "斤" },
+  { id: "seed-jiuye-primary-006", school: "九冶小学", vegetable: "红椒", quantity: 10, unit: "斤" },
+  { id: "seed-jiuye-primary-007", school: "九冶小学", vegetable: "黄椒", quantity: 8, unit: "斤" },
+  { id: "seed-jiuye-primary-008", school: "九冶小学", vegetable: "青椒", quantity: 15, unit: "斤" },
 ];
 
 let records = loadRecords();
