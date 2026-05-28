@@ -1,0 +1,18 @@
+{
+  "name": "学校蔬菜需求统计",
+  "short_name": "蔬菜统计",
+  "description": "统计每个学校所需蔬菜类别和数量总和。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ed",
+  "theme_color": "#2e7d5b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学校蔬菜需求统计</title>
+    <meta name="theme-color" content="#2e7d5b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="蔬菜统计" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">学校供菜统计</p>
+          <h1>蔬菜类别与数量汇总</h1>
+        </div>
+        <div class="actions">
+          <button id="exportCsv" class="secondary" type="button">导出 CSV</button>
+          <button id="clearAll" class="danger" type="button">清空数据</button>
+        </div>
+      </section>
+
+      <section class="entry-panel" aria-label="录入需求">
+        <form id="demandForm" class="form-grid">
+          <label>
+            学校名称
+            <select id="schoolInput" name="school" required>
+              <option value="">请选择学校</option>
+            </select>
+          </label>
+          <label>
+            蔬菜类别
+            <select id="vegetableInput" name="vegetable" required>
+              <option value="">请选择蔬菜</option>
+            </select>
+          </label>
+          <label>
+            数量
+            <input id="quantityInput" name="quantity" type="number" min="0.01" step="0.01" placeholder="例如：25" required />
+          </label>
+          <label>
+            单位
+            <select id="unitInput" name="unit">
+              <option value="斤">斤</option>
+              <option value="公斤">公斤</option>
+              <option value="箱">箱</option>
+              <option value="袋">袋</option>
+              <option value="棵">棵</option>
+            </select>
+          </label>
+          <button class="primary" type="submit">添加需求</button>
+        </form>
+      </section>
+
+      <section class="summary-strip" aria-label="统计概览">
+        <div>
+          <span id="schoolCount">0</span>
+          <p>学校</p>
+        </div>
+        <div>
+          <span id="vegetableCount">0</span>
+          <p>蔬菜类别</p>
+        </div>
+        <div>
+          <span id="recordCount">0</span>
+          <p>录入记录</p>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="filter-panel" aria-label="筛选">
+          <label>
+            搜索学校或蔬菜
+            <input id="searchInput" type="search" placeholder="输入关键词" />
+          </label>
+          <label>
+            按学校查看
+            <select id="schoolFilter">
+              <option value="">全部学校</option>
+            </select>
+          </label>
+        </aside>
+
+        <section class="tables">
+          <div class="table-section">
+            <div class="section-title">
+              <h2>按学校汇总</h2>
+              <p>同一学校、同一蔬菜、同一单位会自动合并。</p>
+            </div>
+            <div class="table-wrap">
+              <table id="summaryTable" class="pivot-table">
+                <thead id="summaryHead"></thead>
+                <tbody id="summaryBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="table-section">
+            <div class="section-title">
+              <h2>录入明细</h2>
+              <p>可删除单条记录后自动重新统计。</p>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>学校</th>
+                    <th>蔬菜</th>
+                    <th>数量</th>
+                    <th>单位</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody id="recordsBody">
+                  <tr>
+                    <td colspan="5" class="empty-row">暂无数据</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </body>
+</html>

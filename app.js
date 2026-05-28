@@ -1,0 +1,466 @@
+const storageKey = "schoolVegetableDemands";
+
+const form = document.querySelector("#demandForm");
+const schoolInput = document.querySelector("#schoolInput");
+const vegetableInput = document.querySelector("#vegetableInput");
+const quantityInput = document.querySelector("#quantityInput");
+const unitInput = document.querySelector("#unitInput");
+const searchInput = document.querySelector("#searchInput");
+const schoolFilter = document.querySelector("#schoolFilter");
+const recordsBody = document.querySelector("#recordsBody");
+const summaryHead = document.querySelector("#summaryHead");
+const summaryBody = document.querySelector("#summaryBody");
+const schoolCount = document.querySelector("#schoolCount");
+const vegetableCount = document.querySelector("#vegetableCount");
+const recordCount = document.querySelector("#recordCount");
+const exportCsv = document.querySelector("#exportCsv");
+const clearAll = document.querySelector("#clearAll");
+
+const fixedSchools = [
+  "九冶小学",
+  "九冶中学",
+  "新铺小学",
+  "新铺幼儿园",
+  "青羊驿小学",
+  "青阳驿幼儿园",
+  "第四中学小学部",
+  "第四中学",
+  "铜钱坝小学",
+  "土车坝小学",
+  "勉阳中心小学",
+  "勉阳初级中学",
+  "沟口小学",
+  "驿坝小学",
+];
+
+const fixedVegetables = [
+  "鸡蛋",
+  "土豆",
+  "新土豆",
+  "新大土豆",
+  "小葱",
+  "本地大葱",
+  "大葱",
+  "生姜",
+  "老姜",
+  "大蒜",
+  "净蒜",
+  "大西芹",
+  "西芹",
+  "青椒",
+  "西红柿",
+  "白菜",
+  "包包菜",
+  "绿豆芽",
+  "豆芽",
+  "豆腐",
+  "豆干",
+  "豆皮",
+  "豆泡",
+  "蒜苔",
+  "茄子",
+  "山药",
+  "黄瓜",
+  "热萝卜",
+  "白萝卜",
+  "红萝卜",
+  "娃娃菜",
+  "魔芋皮",
+  "魔芋粉",
+  "豆卷",
+  "洋葱",
+  "螺丝椒",
+  "面莲菜",
+  "莲菜",
+  "小青菜",
+  "小白菜",
+  "本地芹菜",
+  "麦芹",
+  "平菇",
+  "西葫芦",
+  "冬瓜",
+  "油麦菜",
+  "香菇",
+  "韭菜",
+  "生菜",
+  "苦瓜",
+  "面筋",
+  "红线椒",
+  "线椒",
+  "蒜苗",
+  "玉米",
+  "糯玉米",
+  "青笋",
+  "淮山药",
+  "铁棍山药",
+  "杏鲍菇",
+  "金瓜",
+  "大头青",
+  "有机菜花",
+  "菠菜",
+  "贝贝瓜",
+  "黄椒",
+  "红椒",
+  "豇豆",
+  "香菜",
+  "西兰花",
+  "丝瓜",
+  "荷兰豆",
+  "圆青椒",
+  "南瓜",
+  "金针菇",
+  "白心红薯",
+  "红心红薯",
+  "广红",
+  "板栗瓜",
+  "竹笋",
+  "鲜豌豆粒",
+  "紫甘蓝",
+  "小米辣",
+  "紫薯",
+  "海鲜菇",
+  "美人椒",
+  "蜜薯",
+];
+
+let records = loadRecords();
+
+function loadRecords() {
+  try {
+    return JSON.parse(localStorage.getItem(storageKey)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveRecords() {
+  localStorage.setItem(storageKey, JSON.stringify(records));
+}
+
+function normalizeText(value) {
+  return value.trim().replace(/\s+/g, " ");
+}
+
+function formatQuantity(value) {
+  return Number(value).toLocaleString("zh-CN", {
+    maximumFractionDigits: 2,
+  });
+}
+
+function getVisibleRecords() {
+  const keyword = searchInput.value.trim().toLowerCase();
+  const selectedSchool = schoolFilter.value;
+
+  return records.filter((record) => {
+    const matchesSchool = !selectedSchool || record.school === selectedSchool;
+    const matchesKeyword =
+      !keyword ||
+      record.school.toLowerCase().includes(keyword) ||
+      record.vegetable.toLowerCase().includes(keyword);
+    return matchesSchool && matchesKeyword;
+  });
+}
+
+function groupBySchool(list) {
+  return list.reduce((groups, record) => {
+    const school = groups.get(record.school) || new Map();
+    const key = `${record.vegetable}__${record.unit}`;
+    const current = school.get(key) || {
+      vegetable: record.vegetable,
+      unit: record.unit,
+      quantity: 0,
+    };
+    current.quantity += Number(record.quantity);
+    school.set(key, current);
+    groups.set(record.school, school);
+    return groups;
+  }, new Map());
+}
+
+function addQuantity(totalMap, unit, quantity) {
+  totalMap.set(unit, (totalMap.get(unit) || 0) + Number(quantity));
+}
+
+function formatUnitTotals(totalMap) {
+  if (!totalMap || !totalMap.size) {
+    return "";
+  }
+
+  return [...totalMap.entries()]
+    .map(([unit, quantity]) => `${formatQuantity(quantity)} ${unit}`)
+    .join(" / ");
+}
+
+function renderStats() {
+  const schools = new Set(records.map((record) => record.school));
+  const vegetables = new Set(records.map((record) => record.vegetable));
+
+  schoolCount.textContent = schools.size;
+  vegetableCount.textContent = vegetables.size;
+  recordCount.textContent = records.length;
+}
+
+function renderSchoolFilter() {
+  const current = schoolFilter.value;
+
+  schoolFilter.innerHTML = '<option value="">全部学校</option>';
+  fixedSchools.forEach((school) => {
+    const option = document.createElement("option");
+    option.value = school;
+    option.textContent = school;
+    schoolFilter.append(option);
+  });
+
+  schoolFilter.value = fixedSchools.includes(current) ? current : "";
+}
+
+function renderSchoolOptions() {
+  const current = schoolInput.value;
+  schoolInput.innerHTML = '<option value="">请选择学校</option>';
+
+  fixedSchools.forEach((school) => {
+    const option = document.createElement("option");
+    option.value = school;
+    option.textContent = school;
+    schoolInput.append(option);
+  });
+
+  schoolInput.value = fixedSchools.includes(current) ? current : "";
+}
+
+function renderVegetableOptions() {
+  const current = vegetableInput.value;
+  vegetableInput.innerHTML = '<option value="">请选择蔬菜</option>';
+
+  fixedVegetables.forEach((vegetable) => {
+    const option = document.createElement("option");
+    option.value = vegetable;
+    option.textContent = vegetable;
+    vegetableInput.append(option);
+  });
+
+  vegetableInput.value = fixedVegetables.includes(current) ? current : "";
+}
+
+function renderSummary() {
+  const visibleRecords = getVisibleRecords();
+
+  if (!visibleRecords.length) {
+    summaryHead.innerHTML = "";
+    summaryBody.innerHTML = '<tr><td colspan="2" class="empty-row">暂无数据</td></tr>';
+    return;
+  }
+
+  const schools = fixedSchools.filter((school) =>
+    visibleRecords.some((record) => record.school === school)
+  );
+  const extraSchools = [
+    ...new Set(visibleRecords.map((record) => record.school).filter((school) => !fixedSchools.includes(school))),
+  ].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const visibleSchools = [...schools, ...extraSchools];
+  const vegetables = fixedVegetables.filter((vegetable) =>
+    visibleRecords.some((record) => record.vegetable === vegetable)
+  );
+  const extraVegetables = [
+    ...new Set(
+      visibleRecords
+        .map((record) => record.vegetable)
+        .filter((vegetable) => !fixedVegetables.includes(vegetable))
+    ),
+  ].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const visibleVegetables = [...vegetables, ...extraVegetables];
+  const matrix = new Map();
+  const schoolTotals = new Map();
+  const vegetableTotals = new Map();
+
+  visibleRecords.forEach((record) => {
+    const cellKey = `${record.school}__${record.vegetable}`;
+    const cellTotals = matrix.get(cellKey) || new Map();
+    const schoolTotal = schoolTotals.get(record.school) || new Map();
+    const vegetableTotal = vegetableTotals.get(record.vegetable) || new Map();
+
+    addQuantity(cellTotals, record.unit, record.quantity);
+    addQuantity(schoolTotal, record.unit, record.quantity);
+    addQuantity(vegetableTotal, record.unit, record.quantity);
+
+    matrix.set(cellKey, cellTotals);
+    schoolTotals.set(record.school, schoolTotal);
+    vegetableTotals.set(record.vegetable, vegetableTotal);
+  });
+
+  summaryHead.innerHTML = "";
+  const headerRow = document.createElement("tr");
+  ["学校", ...visibleVegetables, "学校合计"].forEach((heading) => {
+    const th = document.createElement("th");
+    th.textContent = heading;
+    headerRow.append(th);
+  });
+  summaryHead.append(headerRow);
+
+  summaryBody.innerHTML = "";
+  visibleSchools.forEach((school) => {
+    const row = document.createElement("tr");
+    const schoolCell = document.createElement("th");
+    schoolCell.className = "row-heading";
+    schoolCell.scope = "row";
+    schoolCell.textContent = school;
+    row.append(schoolCell);
+
+    visibleVegetables.forEach((vegetable) => {
+      const cell = document.createElement("td");
+      cell.className = "quantity-cell";
+      cell.textContent = formatUnitTotals(matrix.get(`${school}__${vegetable}`)) || "-";
+      row.append(cell);
+    });
+
+    const totalCell = document.createElement("td");
+    totalCell.className = "quantity-cell total-cell";
+    totalCell.textContent = formatUnitTotals(schoolTotals.get(school));
+    row.append(totalCell);
+    summaryBody.append(row);
+  });
+
+  const totalRow = document.createElement("tr");
+  totalRow.className = "grand-total-row";
+  const totalTitle = document.createElement("th");
+  totalTitle.className = "row-heading";
+  totalTitle.scope = "row";
+  totalTitle.textContent = "蔬菜合计";
+  totalRow.append(totalTitle);
+
+  visibleVegetables.forEach((vegetable) => {
+    const cell = document.createElement("td");
+    cell.className = "quantity-cell total-cell";
+    cell.textContent = formatUnitTotals(vegetableTotals.get(vegetable));
+    totalRow.append(cell);
+  });
+
+  const allTotalCell = document.createElement("td");
+  const allTotals = new Map();
+  visibleRecords.forEach((record) => addQuantity(allTotals, record.unit, record.quantity));
+  allTotalCell.className = "quantity-cell total-cell";
+  allTotalCell.textContent = formatUnitTotals(allTotals);
+  totalRow.append(allTotalCell);
+  summaryBody.append(totalRow);
+}
+
+function renderRecords() {
+  const visibleRecords = getVisibleRecords();
+
+  if (!visibleRecords.length) {
+    recordsBody.innerHTML = '<tr><td colspan="5" class="empty-row">暂无数据</td></tr>';
+    return;
+  }
+
+  recordsBody.innerHTML = "";
+  visibleRecords.forEach((record) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><button class="delete-btn" type="button">删除</button></td>
+    `;
+    row.children[0].textContent = record.school;
+    row.children[1].textContent = record.vegetable;
+    row.children[2].textContent = formatQuantity(record.quantity);
+    row.children[3].textContent = record.unit;
+    row.querySelector("button").addEventListener("click", () => {
+      records = records.filter((item) => item.id !== record.id);
+      saveRecords();
+      render();
+    });
+    recordsBody.append(row);
+  });
+}
+
+function render() {
+  renderStats();
+  renderSchoolOptions();
+  renderVegetableOptions();
+  renderSchoolFilter();
+  renderSummary();
+  renderRecords();
+}
+
+function buildSummaryRows() {
+  const grouped = groupBySchool(records);
+  const rows = [["学校", "蔬菜", "总数量", "单位"]];
+
+  [...grouped.entries()]
+    .sort(([a], [b]) => a.localeCompare(b, "zh-CN"))
+    .forEach(([school, vegetableMap]) => {
+      [...vegetableMap.values()]
+        .sort((a, b) => a.vegetable.localeCompare(b.vegetable, "zh-CN"))
+        .forEach((item) => {
+          rows.push([school, item.vegetable, formatQuantity(item.quantity), item.unit]);
+        });
+    });
+
+  return rows;
+}
+
+function toCsv(rows) {
+  return rows
+    .map((row) =>
+      row
+        .map((cell) => `"${String(cell).replace(/"/g, '""')}"`)
+        .join(",")
+    )
+    .join("\n");
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const quantity = Number(quantityInput.value);
+  if (!Number.isFinite(quantity) || quantity <= 0) {
+    quantityInput.focus();
+    return;
+  }
+
+  records.push({
+    id: crypto.randomUUID(),
+    school: schoolInput.value,
+    vegetable: vegetableInput.value,
+    quantity,
+    unit: unitInput.value,
+  });
+
+  saveRecords();
+  render();
+  vegetableInput.value = "";
+  quantityInput.value = "";
+  vegetableInput.focus();
+});
+
+searchInput.addEventListener("input", render);
+schoolFilter.addEventListener("change", render);
+
+clearAll.addEventListener("click", () => {
+  if (!records.length || !confirm("确定清空所有录入数据吗？")) {
+    return;
+  }
+  records = [];
+  saveRecords();
+  render();
+});
+
+exportCsv.addEventListener("click", () => {
+  if (!records.length) {
+    alert("暂无可导出的数据。");
+    return;
+  }
+
+  const csv = "\ufeff" + toCsv(buildSummaryRows());
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `学校蔬菜需求汇总-${new Date().toISOString().slice(0, 10)}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
+});
+
+render();
