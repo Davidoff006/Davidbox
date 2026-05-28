@@ -22,6 +22,7 @@ body {
   font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
   background: var(--bg);
   color: var(--ink);
+  overscroll-behavior-y: contain;
 }
 
 button,
@@ -63,6 +64,37 @@ label {
   color: var(--muted);
   font-size: 14px;
   font-weight: 700;
+}
+
+.pull-refresh {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  min-width: 118px;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid rgba(217, 221, 212, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 28px rgba(44, 62, 51, 0.16);
+  color: var(--primary-dark);
+  font-size: 14px;
+  font-weight: 800;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -58px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.pull-refresh.is-visible {
+  opacity: 1;
+}
+
+.pull-refresh.is-refreshing {
+  transform: translate(-50%, 0) !important;
 }
 
 .app-shell {

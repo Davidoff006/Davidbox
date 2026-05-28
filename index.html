@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="pullRefresh" class="pull-refresh" aria-live="polite">下拉刷新</div>
     <main class="app-shell">
       <section class="topbar">
         <div>
@@ -128,7 +129,7 @@
       </section>
     </main>
 
-    <script src="app.js?v=20260528-mianyang-1"></script>
+    <script src="app.js?v=20260528-pull-refresh-1"></script>
     <script>
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("service-worker.js");

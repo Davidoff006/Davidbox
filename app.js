@@ -15,6 +15,9 @@ const vegetableCount = document.querySelector("#vegetableCount");
 const recordCount = document.querySelector("#recordCount");
 const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
+const pullRefresh = document.querySelector("#pullRefresh");
+
+const appVersion = "20260528-pull-refresh-1";
 
 const fixedSchools = [
   "九冶小学",
@@ -515,4 +518,98 @@ exportCsv.addEventListener("click", () => {
   URL.revokeObjectURL(url);
 });
 
+function resetPullRefresh(distance = 0) {
+  pullRefresh.classList.toggle("is-visible", distance > 0);
+  pullRefresh.classList.remove("is-refreshing");
+  pullRefresh.style.transform = `translate(-50%, ${distance - 58}px)`;
+}
+
+async function refreshApp() {
+  pullRefresh.textContent = "正在刷新";
+  pullRefresh.classList.add("is-visible", "is-refreshing");
+  pullRefresh.style.transform = "translate(-50%, 0)";
+
+  try {
+    if ("caches" in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter((key) => key.startsWith("school-vegetable-app-")).map((key) => caches.delete(key)));
+    }
+
+    if ("serviceWorker" in navigator) {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.update()));
+    }
+  } finally {
+    const url = new URL(window.location.href);
+    url.searchParams.set("refresh", `${appVersion}-${Date.now()}`);
+    window.location.replace(url.toString());
+  }
+}
+
+function initPullToRefresh() {
+  let startY = 0;
+  let distance = 0;
+  let isPulling = false;
+  const threshold = 72;
+
+  window.addEventListener(
+    "touchstart",
+    (event) => {
+      const target = event.target;
+      const blocksPull =
+        target.closest("input, select, textarea, button, .table-wrap") || document.documentElement.scrollTop > 0;
+
+      if (blocksPull || window.scrollY > 0) {
+        isPulling = false;
+        return;
+      }
+
+      startY = event.touches[0].clientY;
+      distance = 0;
+      isPulling = true;
+    },
+    { passive: true }
+  );
+
+  window.addEventListener(
+    "touchmove",
+    (event) => {
+      if (!isPulling) {
+        return;
+      }
+
+      const pullDistance = event.touches[0].clientY - startY;
+      if (pullDistance <= 0) {
+        resetPullRefresh();
+        return;
+      }
+
+      distance = Math.min(pullDistance * 0.45, 100);
+      pullRefresh.textContent = distance >= threshold ? "松开刷新" : "下拉刷新";
+      resetPullRefresh(distance);
+
+      if (event.cancelable && pullDistance > 10) {
+        event.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  window.addEventListener("touchend", () => {
+    if (!isPulling) {
+      return;
+    }
+
+    isPulling = false;
+    if (distance >= threshold) {
+      refreshApp();
+      return;
+    }
+
+    distance = 0;
+    resetPullRefresh();
+  });
+}
+
+initPullToRefresh();
 render();
