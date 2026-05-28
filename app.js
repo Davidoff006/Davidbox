@@ -17,7 +17,7 @@ const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260528-jiuye-primary-1";
+const appVersion = "20260528-pivot-csv-1";
 
 const fixedSchools = [
   "九冶小学",
@@ -461,18 +461,52 @@ function render() {
 }
 
 function buildSummaryRows() {
-  const grouped = groupBySchool(records);
-  const rows = [["学校", "蔬菜", "总数量", "单位"]];
+  const schools = fixedSchools.filter((school) => records.some((record) => record.school === school));
+  const extraSchools = [
+    ...new Set(records.map((record) => record.school).filter((school) => !fixedSchools.includes(school))),
+  ].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const vegetables = fixedVegetables.filter((vegetable) => records.some((record) => record.vegetable === vegetable));
+  const extraVegetables = [
+    ...new Set(records.map((record) => record.vegetable).filter((vegetable) => !fixedVegetables.includes(vegetable))),
+  ].sort((a, b) => a.localeCompare(b, "zh-CN"));
+  const visibleSchools = [...schools, ...extraSchools];
+  const visibleVegetables = [...vegetables, ...extraVegetables];
+  const matrix = new Map();
+  const schoolTotals = new Map();
+  const vegetableTotals = new Map();
+  const allTotals = new Map();
 
-  [...grouped.entries()]
-    .sort(([a], [b]) => a.localeCompare(b, "zh-CN"))
-    .forEach(([school, vegetableMap]) => {
-      [...vegetableMap.values()]
-        .sort((a, b) => a.vegetable.localeCompare(b.vegetable, "zh-CN"))
-        .forEach((item) => {
-          rows.push([school, item.vegetable, formatQuantity(item.quantity), item.unit]);
-        });
-    });
+  records.forEach((record) => {
+    const cellKey = `${record.school}__${record.vegetable}`;
+    const cellTotals = matrix.get(cellKey) || new Map();
+    const schoolTotal = schoolTotals.get(record.school) || new Map();
+    const vegetableTotal = vegetableTotals.get(record.vegetable) || new Map();
+
+    addQuantity(cellTotals, record.unit, record.quantity);
+    addQuantity(schoolTotal, record.unit, record.quantity);
+    addQuantity(vegetableTotal, record.unit, record.quantity);
+    addQuantity(allTotals, record.unit, record.quantity);
+
+    matrix.set(cellKey, cellTotals);
+    schoolTotals.set(record.school, schoolTotal);
+    vegetableTotals.set(record.vegetable, vegetableTotal);
+  });
+
+  const rows = [["学校", ...visibleVegetables, "学校合计"]];
+
+  visibleSchools.forEach((school) => {
+    rows.push([
+      school,
+      ...visibleVegetables.map((vegetable) => formatUnitTotals(matrix.get(`${school}__${vegetable}`)) || "-"),
+      formatUnitTotals(schoolTotals.get(school)),
+    ]);
+  });
+
+  rows.push([
+    "蔬菜总量",
+    ...visibleVegetables.map((vegetable) => formatUnitTotals(vegetableTotals.get(vegetable))),
+    formatUnitTotals(allTotals),
+  ]);
 
   return rows;
 }
