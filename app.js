@@ -52,9 +52,12 @@ const fixedVegetables = [
   "白菜",
   "包包菜",
   "绿豆芽",
+  "黄豆芽",
   "豆芽",
   "豆腐",
+  "白豆腐皮",
   "豆干",
+  "豆腐干",
   "豆皮",
   "豆泡",
   "蒜苔",
@@ -67,12 +70,15 @@ const fixedVegetables = [
   "娃娃菜",
   "魔芋皮",
   "魔芋粉",
+  "宽粉带",
+  "干海带",
   "豆卷",
   "洋葱",
   "螺丝椒",
   "面莲菜",
   "莲菜",
   "小青菜",
+  "青菜",
   "小白菜",
   "本地芹菜",
   "麦芹",
@@ -121,16 +127,62 @@ const fixedVegetables = [
   "海鲜菇",
   "美人椒",
   "蜜薯",
+  "鱼酸菜",
+  "400g龙口粉丝",
+  "泡红椒2kg",
+  "红九九",
+  "400g紫菜",
+];
+
+const seedVersion = "2026-05-28-mianyang-center-primary-1";
+const seedKey = `${storageKey}:seed:${seedVersion}`;
+const seedRecords = [
+  { id: "seed-mianyang-center-001", school: "勉阳中心小学", vegetable: "豆腐", quantity: 10, unit: "斤" },
+  { id: "seed-mianyang-center-002", school: "勉阳中心小学", vegetable: "白豆腐皮", quantity: 5, unit: "斤" },
+  { id: "seed-mianyang-center-003", school: "勉阳中心小学", vegetable: "黄豆芽", quantity: 5, unit: "斤" },
+  { id: "seed-mianyang-center-004", school: "勉阳中心小学", vegetable: "青菜", quantity: 10, unit: "斤" },
+  { id: "seed-mianyang-center-005", school: "勉阳中心小学", vegetable: "宽粉带", quantity: 10, unit: "斤" },
+  { id: "seed-mianyang-center-006", school: "勉阳中心小学", vegetable: "金针菇", quantity: 5, unit: "斤" },
+  { id: "seed-mianyang-center-007", school: "勉阳中心小学", vegetable: "干海带", quantity: 1, unit: "斤" },
+  { id: "seed-mianyang-center-008", school: "勉阳中心小学", vegetable: "魔芋皮", quantity: 5, unit: "斤" },
+  { id: "seed-mianyang-center-009", school: "勉阳中心小学", vegetable: "麦芹", quantity: 10, unit: "斤" },
+  { id: "seed-mianyang-center-010", school: "勉阳中心小学", vegetable: "豆腐干", quantity: 25, unit: "斤" },
+  { id: "seed-mianyang-center-011", school: "勉阳中心小学", vegetable: "包包菜", quantity: 50, unit: "斤" },
+  { id: "seed-mianyang-center-012", school: "勉阳中心小学", vegetable: "青椒", quantity: 5, unit: "斤" },
+  { id: "seed-mianyang-center-013", school: "勉阳中心小学", vegetable: "鱼酸菜", quantity: 4, unit: "袋" },
+  { id: "seed-mianyang-center-014", school: "勉阳中心小学", vegetable: "400g龙口粉丝", quantity: 4, unit: "袋" },
+  { id: "seed-mianyang-center-015", school: "勉阳中心小学", vegetable: "泡红椒2kg", quantity: 1, unit: "袋" },
+  { id: "seed-mianyang-center-016", school: "勉阳中心小学", vegetable: "红九九", quantity: 2, unit: "袋" },
+  { id: "seed-mianyang-center-017", school: "勉阳中心小学", vegetable: "400g紫菜", quantity: 2, unit: "袋" },
 ];
 
 let records = loadRecords();
 
 function loadRecords() {
   try {
-    return JSON.parse(localStorage.getItem(storageKey)) || [];
+    return mergeSeedRecords(JSON.parse(localStorage.getItem(storageKey)) || []);
   } catch {
-    return [];
+    return mergeSeedRecords([]);
   }
+}
+
+function mergeSeedRecords(storedRecords) {
+  if (localStorage.getItem(seedKey) === "done") {
+    return storedRecords;
+  }
+
+  const existingIds = new Set(storedRecords.map((record) => record.id));
+  const mergedRecords = [...storedRecords];
+
+  seedRecords.forEach((record) => {
+    if (!existingIds.has(record.id)) {
+      mergedRecords.push({ ...record });
+    }
+  });
+
+  localStorage.setItem(storageKey, JSON.stringify(mergedRecords));
+  localStorage.setItem(seedKey, "done");
+  return mergedRecords;
 }
 
 function saveRecords() {

@@ -1,4 +1,4 @@
-const cacheName = "school-vegetable-app-v1";
+const cacheName = "school-vegetable-app-v2";
 const appFiles = [
   "./",
   "./index.html",
