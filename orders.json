@@ -1,0 +1,278 @@
+{
+  "version": "2026-05-28-cloud-orders-1",
+  "records": [
+    {
+      "id": "seed-mianyang-center-001",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u8c46\u8150",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-center-002",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u767d\u8c46\u8150\u76ae",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "seed-mianyang-center-003",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9ec4\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "seed-mianyang-center-004",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-center-005",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u5bbd\u7c89\u5e26",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-center-006",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u91d1\u9488\u83c7",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "seed-mianyang-center-007",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u5e72\u6d77\u5e26",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "seed-mianyang-center-008",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9b54\u828b\u76ae",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "seed-mianyang-center-009",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9ea6\u82b9",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-center-010",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u8c46\u8150\u5e72",
+      "unit": "\u65a4",
+      "quantity": 25
+    },
+    {
+      "id": "seed-mianyang-center-011",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u5305\u5305\u83dc",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "seed-mianyang-center-012",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "seed-mianyang-center-013",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u9c7c\u9178\u83dc",
+      "unit": "\u888b",
+      "quantity": 4
+    },
+    {
+      "id": "seed-mianyang-center-014",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "400g\u9f99\u53e3\u7c89\u4e1d",
+      "unit": "\u888b",
+      "quantity": 4
+    },
+    {
+      "id": "seed-mianyang-center-015",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u6ce1\u7ea2\u69122kg",
+      "unit": "\u888b",
+      "quantity": 1
+    },
+    {
+      "id": "seed-mianyang-center-016",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "\u7ea2\u4e5d\u4e5d",
+      "unit": "\u888b",
+      "quantity": 2
+    },
+    {
+      "id": "seed-mianyang-center-017",
+      "school": "\u52c9\u9633\u4e2d\u5fc3\u5c0f\u5b66",
+      "vegetable": "400g\u7d2b\u83dc",
+      "unit": "\u888b",
+      "quantity": 2
+    },
+    {
+      "id": "seed-mianyang-middle-001",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u674e\u6c0f\u9999\u6cb9",
+      "unit": "\u74f6",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-middle-002",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "500g\u6d77\u85fb\u76d0",
+      "unit": "\u888b",
+      "quantity": 240
+    },
+    {
+      "id": "seed-mianyang-middle-003",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u9999\u83c7",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "seed-mianyang-middle-004",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "seed-mianyang-middle-005",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 150
+    },
+    {
+      "id": "seed-mianyang-middle-006",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u8c46\u8150",
+      "unit": "\u65a4",
+      "quantity": 90
+    },
+    {
+      "id": "seed-mianyang-middle-007",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u8c47\u8c46",
+      "unit": "\u65a4",
+      "quantity": 90
+    },
+    {
+      "id": "seed-mianyang-middle-008",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u897f\u5170\u82b1",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-mianyang-middle-009",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u9ec4\u74dc",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "seed-mianyang-middle-010",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u751f\u83dc",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "seed-mianyang-middle-011",
+      "school": "\u52c9\u9633\u521d\u7ea7\u4e2d\u5b66",
+      "vegetable": "\u65b0\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 200
+    },
+    {
+      "id": "seed-jiuye-primary-001",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 280
+    },
+    {
+      "id": "seed-jiuye-primary-002",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u5c71\u836f",
+      "unit": "\u65a4",
+      "quantity": 100
+    },
+    {
+      "id": "seed-jiuye-primary-003",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u97ed\u83dc",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "seed-jiuye-primary-004",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "seed-jiuye-primary-005",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c46\u8150\u5e72",
+      "unit": "\u65a4",
+      "quantity": 35
+    },
+    {
+      "id": "seed-jiuye-primary-006",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u7ea2\u6912",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "seed-jiuye-primary-007",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u9ec4\u6912",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "seed-jiuye-primary-008",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "seed-jiuye-middle-001",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 100
+    },
+    {
+      "id": "seed-jiuye-middle-002",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "seed-jiuye-middle-003",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 50
+    }
+  ]
+}

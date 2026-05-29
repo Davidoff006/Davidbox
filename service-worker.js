@@ -1,9 +1,9 @@
-const cacheName = "school-vegetable-app-v8";
+const cacheName = "school-vegetable-app-v10";
 const appFiles = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app.js?v=20260528-manual-refresh-1",
+  "./app.js?v=20260528-cloud-orders-1",
   "./manifest.webmanifest",
   "./icon.svg",
 ];
@@ -21,5 +21,10 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  if (new URL(event.request.url).pathname.endsWith("/orders.json")) {
+    event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
+    return;
+  }
+
   event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
 });

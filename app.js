@@ -18,7 +18,9 @@ const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260528-manual-refresh-1";
+const appVersion = "20260528-cloud-orders-1";
+const cloudOrdersUrl = "orders.json";
+const cloudIdsKey = `${storageKey}:cloudIds`;
 
 const fixedSchools = [
   "九冶小学",
@@ -140,8 +142,7 @@ const fixedVegetables = [
   "500g海藻盐",
 ];
 
-const seedVersion = "2026-05-28-jiuye-primary-1";
-const seedKey = `${storageKey}:seed:${seedVersion}`;
+const seedVersion = "2026-05-28-jiuye-middle-1";
 const seedRecords = [
   { id: "seed-mianyang-center-001", school: "勉阳中心小学", vegetable: "豆腐", quantity: 10, unit: "斤" },
   { id: "seed-mianyang-center-002", school: "勉阳中心小学", vegetable: "白豆腐皮", quantity: 5, unit: "斤" },
@@ -179,39 +180,74 @@ const seedRecords = [
   { id: "seed-jiuye-primary-006", school: "九冶小学", vegetable: "红椒", quantity: 10, unit: "斤" },
   { id: "seed-jiuye-primary-007", school: "九冶小学", vegetable: "黄椒", quantity: 8, unit: "斤" },
   { id: "seed-jiuye-primary-008", school: "九冶小学", vegetable: "青椒", quantity: 15, unit: "斤" },
+  { id: "seed-jiuye-middle-001", school: "九冶中学", vegetable: "白菜", quantity: 100, unit: "斤" },
+  { id: "seed-jiuye-middle-002", school: "九冶中学", vegetable: "青椒", quantity: 20, unit: "斤" },
+  { id: "seed-jiuye-middle-003", school: "九冶中学", vegetable: "土豆", quantity: 50, unit: "斤" },
 ];
 
 let records = loadRecords();
 
 function loadRecords() {
   try {
-    return mergeSeedRecords(JSON.parse(localStorage.getItem(storageKey)) || []);
+    const storedRecords = JSON.parse(localStorage.getItem(storageKey)) || [];
+    return storedRecords.length ? storedRecords : seedRecords.map((record) => ({ ...record }));
   } catch {
-    return mergeSeedRecords([]);
+    return seedRecords.map((record) => ({ ...record }));
   }
-}
-
-function mergeSeedRecords(storedRecords) {
-  if (localStorage.getItem(seedKey) === "done") {
-    return storedRecords;
-  }
-
-  const existingIds = new Set(storedRecords.map((record) => record.id));
-  const mergedRecords = [...storedRecords];
-
-  seedRecords.forEach((record) => {
-    if (!existingIds.has(record.id)) {
-      mergedRecords.push({ ...record });
-    }
-  });
-
-  localStorage.setItem(storageKey, JSON.stringify(mergedRecords));
-  localStorage.setItem(seedKey, "done");
-  return mergedRecords;
 }
 
 function saveRecords() {
   localStorage.setItem(storageKey, JSON.stringify(records));
+}
+
+function normalizeRecord(record, index) {
+  const school = normalizeText(String(record.school || ""));
+  const vegetable = normalizeText(String(record.vegetable || ""));
+  const unit = normalizeText(String(record.unit || "斤"));
+  const quantity = Number(record.quantity);
+
+  if (!school || !vegetable || !Number.isFinite(quantity) || quantity <= 0) {
+    return null;
+  }
+
+  return {
+    id: normalizeText(String(record.id || `cloud-${index + 1}`)),
+    school,
+    vegetable,
+    quantity,
+    unit,
+  };
+}
+
+async function loadCloudRecords() {
+  const response = await fetch(`${cloudOrdersUrl}?v=${Date.now()}`, { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error("订单数据加载失败");
+  }
+
+  const data = await response.json();
+  const rawRecords = Array.isArray(data) ? data : data.records;
+
+  if (!Array.isArray(rawRecords)) {
+    throw new Error("订单数据格式不正确");
+  }
+
+  return rawRecords.map(normalizeRecord).filter(Boolean);
+}
+
+async function syncCloudRecords() {
+  try {
+    const cloudRecords = await loadCloudRecords();
+    const cloudIds = new Set(cloudRecords.map((record) => record.id));
+    const previousCloudIds = new Set(JSON.parse(localStorage.getItem(cloudIdsKey)) || []);
+    const localRecords = records.filter((record) => !cloudIds.has(record.id) && !previousCloudIds.has(record.id));
+
+    records = [...cloudRecords, ...localRecords];
+    saveRecords();
+    localStorage.setItem(cloudIdsKey, JSON.stringify([...cloudIds]));
+  } catch (error) {
+    console.warn(error);
+  }
 }
 
 function normalizeText(value) {
@@ -669,5 +705,10 @@ function initPullToRefresh() {
   });
 }
 
-initPullToRefresh();
-render();
+async function initApp() {
+  initPullToRefresh();
+  await syncCloudRecords();
+  render();
+}
+
+initApp();
