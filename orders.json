@@ -1,4 +1,1454 @@
 {
-  "version": "2026-05-29-empty-1",
-  "records": []
+  "version": "2026-05-31-screenshot-menus-1",
+  "records": [
+    {
+      "id": "screenshot-menu-20260531-001",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 130
+    },
+    {
+      "id": "screenshot-menu-20260531-002",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8c46\u76ae",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-003",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-004",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8106\u8033",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-005",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5bbd\u7c89",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-006",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-007",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u6709\u673a\u83dc\u82b1",
+      "unit": "\u65a4",
+      "quantity": 100
+    },
+    {
+      "id": "screenshot-menu-20260531-008",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-009",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 250
+    },
+    {
+      "id": "screenshot-menu-20260531-010",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-011",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9f99\u53e3\u7c89\u4e1d",
+      "unit": "\u5305",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-012",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u6728\u8033",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-013",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-014",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-015",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-016",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u51c0\u849c",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-017",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8c46\u76ae",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-018",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8c46\u8150",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-019",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u8c46\u5e72",
+      "unit": "\u65a4",
+      "quantity": 7
+    },
+    {
+      "id": "screenshot-menu-20260531-020",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u849c\u82d4",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-021",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u7ebf\u6912",
+      "unit": "\u65a4",
+      "quantity": 7
+    },
+    {
+      "id": "screenshot-menu-20260531-022",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-023",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u7f8e\u4eba\u6912",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-024",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5305\u83dc",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-025",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u80e1\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-026",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u91d1\u9488\u83c7",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-027",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u9c7c\u4e38",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-028",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u51ac\u74dc",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-029",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-030",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-031",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-032",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-033",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u51c0\u849c",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-034",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u6c34\u679c\u6d0b\u8471",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-035",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5c0f\u6728\u8033",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-036",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u6d46\u6c34",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-037",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u65e0\u6838\u5c0f\u67a3",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-038",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5e72\u6d77\u5e26\u4e1d",
+      "unit": "\u4ef6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-039",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5e72\u6d77\u5e26\u7247",
+      "unit": "\u4ef6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-040",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u7092\u7c73\u7c89",
+      "unit": "\u4ef6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-041",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u7c73\u7ebf",
+      "unit": "\u4ef6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-042",
+      "school": "\u4e5d\u51b6\u4e2d\u5b66",
+      "vegetable": "\u5bbd\u7c89\u5e26",
+      "unit": "\u4ef6",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-043",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u7389\u7c73\u7c92",
+      "unit": "\u65a4",
+      "quantity": 230
+    },
+    {
+      "id": "screenshot-menu-20260531-044",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c4c\u8c46\u7c92",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-045",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 200
+    },
+    {
+      "id": "screenshot-menu-20260531-046",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u7a7a\u5fc3\u83dc",
+      "unit": "\u65a4",
+      "quantity": 60
+    },
+    {
+      "id": "screenshot-menu-20260531-047",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-048",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-049",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c46\u8150",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-050",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u5c0f\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-051",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-052",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u80e1\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-053",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-054",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-055",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-056",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u9ec4\u74dc",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-057",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-058",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u9ea6\u82b9",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-059",
+      "school": "\u4e5d\u51b6\u5c0f\u5b66",
+      "vegetable": "\u7d2b\u85af",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-060",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 9
+    },
+    {
+      "id": "screenshot-menu-20260531-061",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u9999\u83c7",
+      "unit": "\u65a4",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-062",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u7ea2\u85af",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-063",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-064",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 75
+    },
+    {
+      "id": "screenshot-menu-20260531-065",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u4e1d\u74dc",
+      "unit": "\u65a4",
+      "quantity": 45
+    },
+    {
+      "id": "screenshot-menu-20260531-066",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u91d1\u74dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-067",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u7ea2\u6912",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-068",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u6709\u673a\u83dc\u82b1",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-069",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-070",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u8c46\u5e72",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-071",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-072",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-073",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-074",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u8fa3\u6912\u6bb5",
+      "unit": "\u65a4",
+      "quantity": 0.5
+    },
+    {
+      "id": "screenshot-menu-20260531-075",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u5b89\u742a",
+      "unit": "\u888b",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-076",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u9ec4\u8c46\u9171",
+      "unit": "\u74f6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-077",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u7c89\u6761",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-078",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u65e0\u6838\u5c0f\u67a3",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-079",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-080",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u867e\u997a",
+      "unit": "\u76d2",
+      "quantity": 25
+    },
+    {
+      "id": "screenshot-menu-20260531-081",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u6728\u8033",
+      "unit": "\u65a4",
+      "quantity": 0.5
+    },
+    {
+      "id": "screenshot-menu-20260531-082",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u9f99\u53e3\u7c89\u4e1d",
+      "unit": "\u888b",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-083",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u767d\u7cd6",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-084",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u8fa3\u6912\u9762",
+      "unit": "\u65a4",
+      "quantity": 0.5
+    },
+    {
+      "id": "screenshot-menu-20260531-085",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u767d\u84bf",
+      "unit": "\u65a4",
+      "quantity": 0.2
+    },
+    {
+      "id": "screenshot-menu-20260531-086",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u82b1\u6912\u7c89",
+      "unit": "\u65a4",
+      "quantity": 0.4
+    },
+    {
+      "id": "screenshot-menu-20260531-087",
+      "school": "\u65b0\u94fa\u5e7c\u513f\u56ed",
+      "vegetable": "\u80e1\u6912\u7c89",
+      "unit": "\u65a4",
+      "quantity": 0.6
+    },
+    {
+      "id": "screenshot-menu-20260531-088",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-089",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-090",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u767d\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-091",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u97ed\u83dc",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-092",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-093",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-094",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u87ba\u4e1d\u6912",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-095",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u957f\u8304\u5b50",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-096",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u51ac\u74dc",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-097",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-098",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-099",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u80e1\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-100",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u9ea6\u82b9",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-101",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-102",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-103",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u9752\u7b0b",
+      "unit": "\u65a4",
+      "quantity": 80
+    },
+    {
+      "id": "screenshot-menu-20260531-104",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u8c47\u8c46",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-105",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-106",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u767d\u7cd6",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-107",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u8fa3\u6912\u9762",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-108",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u6d77\u85fb\u76d0",
+      "unit": "\u888b",
+      "quantity": 60
+    },
+    {
+      "id": "screenshot-menu-20260531-109",
+      "school": "\u9752\u7f8a\u9a7f\u5c0f\u5b66",
+      "vegetable": "\u6d77\u5929\u5473\u6781\u9c9c1.9L",
+      "unit": "\u6876",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-110",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-111",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-112",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u9999\u83c7",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-113",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-114",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u80e1\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-115",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u8c46\u76ae",
+      "unit": "\u65a4",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-116",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u9752\u7b0b",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-117",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-118",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-119",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u571f\u8c46\u6dc0\u7c89",
+      "unit": "\u888b",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-120",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u9ec4\u8c46\u9171",
+      "unit": "\u74f6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-121",
+      "school": "\u9752\u9633\u9a7f\u5e7c\u513f\u56ed",
+      "vegetable": "\u6d77\u5929\u5473\u6781\u9c9c1.9L",
+      "unit": "\u6876",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-122",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u674f\u9c8d\u83c7",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-123",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u9ea6\u82b9",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-124",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u8c46\u5e72",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-125",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-126",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 14
+    },
+    {
+      "id": "screenshot-menu-20260531-127",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-128",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-129",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-130",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u97ed\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-131",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-132",
+      "school": "\u7b2c\u56db\u4e2d\u5b66\u5c0f\u5b66\u90e8",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-133",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u8c46\u8150\u5e72",
+      "unit": "\u65a4",
+      "quantity": 25
+    },
+    {
+      "id": "screenshot-menu-20260531-134",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u674f\u9c8d\u83c7",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-135",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u8c46\u8150",
+      "unit": "\u65a4",
+      "quantity": 100
+    },
+    {
+      "id": "screenshot-menu-20260531-136",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9999\u83c7",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-137",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 80
+    },
+    {
+      "id": "screenshot-menu-20260531-138",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 200
+    },
+    {
+      "id": "screenshot-menu-20260531-139",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 120
+    },
+    {
+      "id": "screenshot-menu-20260531-140",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u8c46\u76ae",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-141",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-142",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u97ed\u83dc",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-143",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u8c46\u82bd",
+      "unit": "\u65a4",
+      "quantity": 50
+    },
+    {
+      "id": "screenshot-menu-20260531-144",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u767d\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 60
+    },
+    {
+      "id": "screenshot-menu-20260531-145",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-146",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u897f\u5170\u82b1",
+      "unit": "\u65a4",
+      "quantity": 100
+    },
+    {
+      "id": "screenshot-menu-20260531-147",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u897f\u846b\u82a6",
+      "unit": "\u65a4",
+      "quantity": 80
+    },
+    {
+      "id": "screenshot-menu-20260531-148",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u5e7f\u7ea2",
+      "unit": "\u65a4",
+      "quantity": 40
+    },
+    {
+      "id": "screenshot-menu-20260531-149",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u7ebf\u6912",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-150",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u8c47\u8c46",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-151",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u53e3\u8611",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-152",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9ec4\u74dc",
+      "unit": "\u65a4",
+      "quantity": 20
+    },
+    {
+      "id": "screenshot-menu-20260531-153",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u897f\u82b9",
+      "unit": "\u65a4",
+      "quantity": 30
+    },
+    {
+      "id": "screenshot-menu-20260531-154",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9e4c\u9e51\u86cb",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-155",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-156",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u5c0f\u8471",
+      "unit": "\u65a4",
+      "quantity": 4
+    },
+    {
+      "id": "screenshot-menu-20260531-157",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-158",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u51c0\u849c",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-159",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 120
+    },
+    {
+      "id": "screenshot-menu-20260531-160",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u9752\u7b0b",
+      "unit": "\u65a4",
+      "quantity": 25
+    },
+    {
+      "id": "screenshot-menu-20260531-161",
+      "school": "\u7b2c\u56db\u4e2d\u5b66",
+      "vegetable": "\u83b2\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-162",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-163",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-164",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 3
+    },
+    {
+      "id": "screenshot-menu-20260531-165",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u7ebf\u6912",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-166",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u6d0b\u8471",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-167",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u5305\u83dc",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-168",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u8c47\u8c46",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-169",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u9b54\u828b\u76ae",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-170",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u849c\u82d4",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-171",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-172",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u83b2\u83dc",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-173",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-174",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u897f\u846b\u82a6",
+      "unit": "\u65a4",
+      "quantity": 8
+    },
+    {
+      "id": "screenshot-menu-20260531-175",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u9752\u83dc",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-176",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-177",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-178",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u5c0f\u6876\u8c46\u74e3\u9171",
+      "unit": "\u6876",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-179",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u5929\u6e20\u76d0",
+      "unit": "\u888b",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-180",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u7ea2\u4e5d\u4e5d",
+      "unit": "\u888b",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-181",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u7c89\u6761",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-182",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u6728\u8033",
+      "unit": "\u65a4",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-183",
+      "school": "\u94dc\u94b1\u575d\u5c0f\u5b66",
+      "vegetable": "\u9c7c\u9178\u83dc",
+      "unit": "\u888b",
+      "quantity": 2
+    },
+    {
+      "id": "screenshot-menu-20260531-184",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u672c\u5730\u5927\u8471",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-185",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u751f\u59dc",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-186",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u5927\u849c",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-187",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u9752\u6912",
+      "unit": "\u65a4",
+      "quantity": 6
+    },
+    {
+      "id": "screenshot-menu-20260531-188",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u7ea2\u841d\u535c",
+      "unit": "\u65a4",
+      "quantity": 5
+    },
+    {
+      "id": "screenshot-menu-20260531-189",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u9ea6\u82b9",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-190",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u767d\u83dc",
+      "unit": "\u65a4",
+      "quantity": 13
+    },
+    {
+      "id": "screenshot-menu-20260531-191",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u83dc\u82b1",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-192",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u9752\u7b0b",
+      "unit": "\u65a4",
+      "quantity": 25
+    },
+    {
+      "id": "screenshot-menu-20260531-193",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u5c71\u836f",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-194",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u897f\u7ea2\u67ff",
+      "unit": "\u65a4",
+      "quantity": 12
+    },
+    {
+      "id": "screenshot-menu-20260531-195",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u9e21\u86cb",
+      "unit": "\u65a4",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-196",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u571f\u8c46",
+      "unit": "\u65a4",
+      "quantity": 25
+    },
+    {
+      "id": "screenshot-menu-20260531-197",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u5305\u83dc",
+      "unit": "\u65a4",
+      "quantity": 15
+    },
+    {
+      "id": "screenshot-menu-20260531-198",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u52a0\u52a0\u9171\u6cb9",
+      "unit": "\u74f6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-199",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u6d77\u5929\u6599\u91521.9L",
+      "unit": "\u74f6",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-200",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u7d2b\u6797\u918b",
+      "unit": "\u6876",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-201",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u56fd\u6cf0400",
+      "unit": "\u888b",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-202",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u6df7\u5408\u6599\u9762",
+      "unit": "\u65a4",
+      "quantity": 0.5
+    },
+    {
+      "id": "screenshot-menu-20260531-203",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u82b1\u6912\u9762",
+      "unit": "\u65a4",
+      "quantity": 0.5
+    },
+    {
+      "id": "screenshot-menu-20260531-204",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u725b\u76ae\u8c46\u5e72",
+      "unit": "\u888b",
+      "quantity": 10
+    },
+    {
+      "id": "screenshot-menu-20260531-205",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u6728\u8033",
+      "unit": "\u65a4",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-206",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u7d2b\u83dc",
+      "unit": "\u888b",
+      "quantity": 1
+    },
+    {
+      "id": "screenshot-menu-20260531-207",
+      "school": "\u571f\u8f66\u575d\u5c0f\u5b66",
+      "vegetable": "\u7c89\u4e1d",
+      "unit": "\u888b",
+      "quantity": 1
+    }
+  ]
 }
