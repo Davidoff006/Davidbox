@@ -18,9 +18,10 @@ const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260530-delete-school-row-1";
+const appVersion = "20260530-persist-school-delete-1";
 const cloudOrdersUrl = "orders.json";
 const cloudIdsKey = `${storageKey}:cloudIds`;
+const deletedSchoolsKey = `${storageKey}:deletedSchools`;
 
 const fixedSchools = [
   "九冶小学",
@@ -238,12 +239,40 @@ async function loadCloudRecords() {
 async function syncCloudRecords() {
   try {
     const cloudRecords = await loadCloudRecords();
-    records = [...cloudRecords];
+    const deletedSchools = getDeletedSchools();
+    records = cloudRecords.filter((record) => !deletedSchools.has(record.school));
     saveRecords();
     localStorage.setItem(cloudIdsKey, JSON.stringify(cloudRecords.map((record) => record.id)));
   } catch (error) {
     console.warn(error);
   }
+}
+
+function getDeletedSchools() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(deletedSchoolsKey)) || []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveDeletedSchools(deletedSchools) {
+  localStorage.setItem(deletedSchoolsKey, JSON.stringify([...deletedSchools]));
+}
+
+function markSchoolDeleted(school) {
+  const deletedSchools = getDeletedSchools();
+  deletedSchools.add(school);
+  saveDeletedSchools(deletedSchools);
+}
+
+function restoreSchoolIfDeleted(school) {
+  const deletedSchools = getDeletedSchools();
+  if (!deletedSchools.delete(school)) {
+    return;
+  }
+
+  saveDeletedSchools(deletedSchools);
 }
 
 function normalizeText(value) {
@@ -584,6 +613,7 @@ form.addEventListener("submit", (event) => {
     unit: unitInput.value,
   });
 
+  restoreSchoolIfDeleted(schoolInput.value);
   saveRecords();
   render();
   vegetableInput.value = "";
@@ -606,6 +636,7 @@ summaryBody.addEventListener("click", (event) => {
   }
 
   records = records.filter((record) => record.school !== school);
+  markSchoolDeleted(school);
   saveRecords();
   render();
 });
@@ -614,6 +645,9 @@ clearAll.addEventListener("click", () => {
   if (!records.length || !confirm("确定清空所有录入数据吗？")) {
     return;
   }
+  const deletedSchools = getDeletedSchools();
+  records.forEach((record) => deletedSchools.add(record.school));
+  saveDeletedSchools(deletedSchools);
   records = [];
   saveRecords();
   render();
