@@ -18,7 +18,7 @@ const exportCsv = document.querySelector("#exportCsv");
 const clearAll = document.querySelector("#clearAll");
 const pullRefresh = document.querySelector("#pullRefresh");
 
-const appVersion = "20260528-cloud-orders-1";
+const appVersion = "20260530-delete-school-row-1";
 const cloudOrdersUrl = "orders.json";
 const cloudIdsKey = `${storageKey}:cloudIds`;
 
@@ -238,13 +238,9 @@ async function loadCloudRecords() {
 async function syncCloudRecords() {
   try {
     const cloudRecords = await loadCloudRecords();
-    const cloudIds = new Set(cloudRecords.map((record) => record.id));
-    const previousCloudIds = new Set(JSON.parse(localStorage.getItem(cloudIdsKey)) || []);
-    const localRecords = records.filter((record) => !cloudIds.has(record.id) && !previousCloudIds.has(record.id));
-
-    records = [...cloudRecords, ...localRecords];
+    records = [...cloudRecords];
     saveRecords();
-    localStorage.setItem(cloudIdsKey, JSON.stringify([...cloudIds]));
+    localStorage.setItem(cloudIdsKey, JSON.stringify(cloudRecords.map((record) => record.id)));
   } catch (error) {
     console.warn(error);
   }
@@ -403,7 +399,7 @@ function renderSummary() {
 
   summaryHead.innerHTML = "";
   const headerRow = document.createElement("tr");
-  ["学校", ...visibleVegetables, "学校合计"].forEach((heading) => {
+  ["学校", ...visibleVegetables, "学校合计", "操作"].forEach((heading) => {
     const th = document.createElement("th");
     th.textContent = heading;
     headerRow.append(th);
@@ -430,6 +426,15 @@ function renderSummary() {
     totalCell.className = "quantity-cell total-cell";
     totalCell.textContent = formatUnitTotals(schoolTotals.get(school));
     row.append(totalCell);
+
+    const actionCell = document.createElement("td");
+    const deleteSchoolButton = document.createElement("button");
+    deleteSchoolButton.className = "delete-btn delete-school-btn";
+    deleteSchoolButton.type = "button";
+    deleteSchoolButton.dataset.school = school;
+    deleteSchoolButton.textContent = "删除学校";
+    actionCell.append(deleteSchoolButton);
+    row.append(actionCell);
     summaryBody.append(row);
   });
 
@@ -454,6 +459,10 @@ function renderSummary() {
   allTotalCell.className = "quantity-cell total-cell";
   allTotalCell.textContent = formatUnitTotals(allTotals);
   totalRow.append(allTotalCell);
+
+  const totalActionCell = document.createElement("td");
+  totalActionCell.textContent = "-";
+  totalRow.append(totalActionCell);
   summaryBody.append(totalRow);
 }
 
@@ -584,6 +593,22 @@ form.addEventListener("submit", (event) => {
 
 searchInput.addEventListener("input", render);
 schoolFilter.addEventListener("change", render);
+
+summaryBody.addEventListener("click", (event) => {
+  const button = event.target.closest(".delete-school-btn");
+  if (!button) {
+    return;
+  }
+
+  const school = button.dataset.school;
+  if (!school || !confirm(`确定删除 ${school} 的所有记录吗？`)) {
+    return;
+  }
+
+  records = records.filter((record) => record.school !== school);
+  saveRecords();
+  render();
+});
 
 clearAll.addEventListener("click", () => {
   if (!records.length || !confirm("确定清空所有录入数据吗？")) {

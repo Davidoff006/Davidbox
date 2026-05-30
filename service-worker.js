@@ -1,9 +1,9 @@
-const cacheName = "school-vegetable-app-v10";
+const cacheName = "school-vegetable-app-v12";
 const appFiles = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app.js?v=20260528-cloud-orders-1",
+  "./app.js?v=20260530-delete-school-row-1",
   "./manifest.webmanifest",
   "./icon.svg",
 ];
